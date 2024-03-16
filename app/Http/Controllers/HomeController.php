@@ -18,4 +18,8 @@ class HomeController extends Controller
 
         return view('index', compact('data'));
     }
+    public function create()
+    {
+        return view('create');
+    }
 }
