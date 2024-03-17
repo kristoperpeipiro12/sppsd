@@ -20,5 +20,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'dashboard']);
 
-Route::get('/user', [HomeController::class, 'index']);
+Route::get('/user', [HomeController::class, 'index'])->name('user.index');
 Route::get('/create', [HomeController::class, 'create'])->name('user.create');
+Route::post('/tambah', [HomeController::class, 'tambah'])->name('user.tambah');
