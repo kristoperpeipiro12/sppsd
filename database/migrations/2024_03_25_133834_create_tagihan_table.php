@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_pemasukan', function (Blueprint $table) {
-            $table->id('id_pemasukan');
+        Schema::create('tagihan', function (Blueprint $table) {
+            $table->id();
+            $table->string('id_tagihan');
             $table->string('id_kategori');
-            $table->integer('nis');
-            $table->dateTime('tanggal');
-            $table->integer('pemasukan');
-            $table->string('jenis_pemasukan');
+            $table->string('jumlah_tagihan');
+            $table->string('tanggal_jatuh_tempo');
+
+            $table->timestamps();
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('table_pemasukan');
+        Schema::dropIfExists('tagihan');
     }
 };

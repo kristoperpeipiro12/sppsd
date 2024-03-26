@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\MasterData\DataUser;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -13,19 +14,19 @@ class HomeController extends Controller
     {
         $data = [];
 
-        return view('admin.dashboard', compact('data'));
+        return view('admin.dashboard.dashboard', compact('data'));
     }
 
     public function index()
     {
         $data = User::get();
 
-        return view('admin.index', compact('data'));
+        return view('admin.master_data.data_user.index', compact('data'));
     }
 
     public function create()
     {
-        return view('admin.create');
+        return view('admin.master_data.data_user.create');
     }
 
     public function tambah(Request $request)
@@ -53,7 +54,7 @@ class HomeController extends Controller
     public function edit(Request $request, $id)
     {
         $data = User::find($id);
-        return view('admin.edit', compact('data')); // Perbaiki penulisan fungsi compact
+        return view('admin.master_data.data_user.edit', compact('data'));
     }
     public function update(Request $request, $id)
     {
