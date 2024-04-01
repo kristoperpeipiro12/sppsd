@@ -49,7 +49,7 @@ class HomeController extends Controller
 
         User::create($data);
 
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
     public function edit(Request $request, $id)
     {
@@ -74,7 +74,7 @@ class HomeController extends Controller
             $data['password'] = Hash::make($request->password);
         }
         User::whereId($id)->update($data);
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
     public function delete(Request $request, $id)
     {
@@ -83,6 +83,6 @@ class HomeController extends Controller
         if ($data) {
             $data->delete();
         }
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
 }

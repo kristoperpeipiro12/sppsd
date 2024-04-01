@@ -20,7 +20,7 @@
         <!-- /.content-header -->
         <section class="content">
             <div class="container-fluid">
-                <form action="{{ route('user.tambah') }}" method="POST">
+                <form action="{{ route('admin.user.tambah') }}" method="POST">
                     @csrf
                     <div class="row">
                         <!-- left column -->
