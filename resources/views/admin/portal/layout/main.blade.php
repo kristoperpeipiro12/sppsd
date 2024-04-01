@@ -102,7 +102,7 @@
                             </a>
                         </li> --}}
                         <li class="nav-item">
-                            <a href="{{ route('admin.dashboard') }}" class="nav-link">
+                            <a href="{{ route('admin.admin.dashboard') }}" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -151,7 +151,7 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="{{ route('user.index') }}" class="nav-link">
+                                    <a href="{{ route('admin.user.index') }}" class="nav-link">
 
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data User</p>
@@ -215,6 +215,14 @@
                                 <p>
                                     Pages
                                     <i class="fas fa-angle-left right"></i>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('logout') }}" class="nav-link">
+                                <i class="nav-icon fa fa-info"></i>
+                                <p>
+                                    logout
                                 </p>
                             </a>
                         </li>
